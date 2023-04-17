@@ -75,9 +75,11 @@ jobs:
       - name: Encrypt report
         if: always()
         continue-on-error: true
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
         run: |
-          sudo npx staticrypt ./allure-history/${{ github.run_number }}/index.html --short -d . -p ${{ STATICRYPT_PASSWORD }}
-          sudo npx staticrypt ./allure-history/index.html --short -d . -p ${{ STATICRYPT_PASSWORD }}
+          sudo npx staticrypt ./allure-history/${{ github.run_number }}/index.html --short -d .
+          sudo npx staticrypt ./allure-history/index.html --short -d .
 #      - name: Setup upterm session
 #        uses: lhotari/action-upterm@v1
       - name: Deploy report to GH Pages
