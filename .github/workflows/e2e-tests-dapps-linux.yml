@@ -76,9 +76,9 @@ jobs:
         if: always()
         continue-on-error: true
         env:
-          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+          env.STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
         run: |
-          echo $STATICRYPT_PASSWORD
+          echo $env.STATICRYPT_PASSWORD
           sudo npx staticrypt ./allure-history/${{ github.run_number }}/index.html -d .
           sudo npx staticrypt ./allure-history/index.html -d .
 #      - name: Setup upterm session
