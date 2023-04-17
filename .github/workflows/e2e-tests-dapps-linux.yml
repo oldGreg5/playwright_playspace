@@ -71,13 +71,13 @@ jobs:
 #          allure_history: allure-history
 #          keep_reports: 20
 
-#      - name: Setup upterm session
-#        uses: lhotari/action-upterm@v1
 
       - name: Encrypt report
         if: always()
         run: |
           npx pagecrypt ./${{ github.run_number }}/index.html ./${{ github.run_number }}/index.html oldgreg
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
       - name: Deploy report to GH Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
