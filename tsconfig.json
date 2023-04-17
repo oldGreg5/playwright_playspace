@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "types": ["node"],
-    "lib": ["es2015", "dom"],
-    "resolveJsonModule": true,
-    "esModuleInterop": true
-  }
-}
