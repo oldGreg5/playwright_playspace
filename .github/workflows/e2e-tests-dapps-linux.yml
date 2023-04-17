@@ -76,7 +76,7 @@ jobs:
         if: always()
         continue-on-error: true
         run: |
-          npx staticrypt ./allure-history/${{ github.run_number }}/index.html --short -d . -p oldgreg
+          sudo npx staticrypt ./allure-history/${{ github.run_number }}/index.html --short -d . -p oldgreg
 #      - name: Setup upterm session
 #        uses: lhotari/action-upterm@v1
       - name: Deploy report to GH Pages
