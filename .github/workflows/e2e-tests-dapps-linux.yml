@@ -74,6 +74,7 @@ jobs:
 
       - name: Encrypt report
         if: always()
+        continue-on-error: true
         run: |
           npx pagecrypt ./${{ github.run_number }}/index.html ./${{ github.run_number }}/index.html oldgreg
       - name: Setup upterm session
