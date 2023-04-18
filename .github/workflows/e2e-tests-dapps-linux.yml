@@ -78,8 +78,8 @@ jobs:
         env:
           env.STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
         run: |
-          staticrypt ./allure-history/${{ github.run_number }}/index.html -d . -p nwb*pwj6RKZ3cvy!fay
-          staticrypt ./allure-history/index.html -d . -p nwb*pwj6RKZ3cvy!fay
+          npx staticrypt ./allure-history/${{ github.run_number }}/index.html -d . -p nwb*pwj6RKZ3cvyfay
+          npx staticrypt ./allure-history/index.html -d . -p nwb*pwj6RKZ3cvyfay
       - name: Setup upterm session
         uses: lhotari/action-upterm@v1
       - name: Deploy report to GH Pages
