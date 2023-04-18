@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Apr 17 18:17:48 GMT 2023","Mon Apr 17 18:17:54 GMT 2023","5973","","exampleTest.spec.ts","","","","has title",""
+"passed","Tue Apr 18 07:32:36 GMT 2023","Tue Apr 18 07:32:37 GMT 2023","1484","","exampleTest.spec.ts","","","","has title",""
