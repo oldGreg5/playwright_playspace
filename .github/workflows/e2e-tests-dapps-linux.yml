@@ -78,17 +78,13 @@ jobs:
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
         run: |
-          sudo npx staticrypt ./allure-history/${{ github.run_number }}/index.html -d . -p nwb*pwj6RKZ3cvyfay
-          sudo npx staticrypt ./allure-history/index.html -d . -p nwb*pwj6RKZ3cvyfay
-#      - name: Setup upterm session
-#        uses: lhotari/action-upterm@v1
+          sudo npx staticrypt ./allure-history/${{ github.run_number }}/index.html -d .
+          sudo npx staticrypt ./allure-history/index.html -d .
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
       - name: Deploy report to GH Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3.9.3
-        #        env:
-        #          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #          PUBLISH_BRANCH: gh-pages
-        #          PUBLISH_DIR: allure-history
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: allure-history
