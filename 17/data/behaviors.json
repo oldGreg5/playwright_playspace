@@ -1,1 +1,0 @@
-{"uid":"b1a8273437954620fa374b796ffaacdd","children":[{"name":"has title","uid":"b3cea0695d29a135","parentUid":"b1a8273437954620fa374b796ffaacdd","status":"passed","time":{"start":1681755641884,"stop":1681755643733,"duration":1849},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[]}],"name":"behaviors"}
